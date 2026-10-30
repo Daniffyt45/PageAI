@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecosistema y Aplicaciones de la Inteligencia Artificial</title>
+    <style>
+        :root {
+            --bg-body: #0f172a;
+            --bg-card: #1e293b;
+            --primary: #3b82f6;
+            --primary-hover: #60a5fa;
+            --accent: #8b5cf6;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 4rem 1.5rem 3rem 1.5rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0 0 1rem 0;
+            font-size: 2.8rem;
+            background: linear-gradient(to right, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            margin: 0 auto;
+            max-width: 650px;
+            color: var(--text-muted);
+            font-size: 1.2rem;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: var(--primary-hover);
+            font-size: 1.8rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            font-size: 1.05rem;
+        }
+
+        .sub-title {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        ul, ol {
+            padding-left: 1.5rem;
+            color: #cbd5e1;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+        }
+
+        .example-box {
+            background-color: #090d16;
+            border-left: 4px solid var(--accent);
+            padding: 1.2rem;
+            border-radius: 6px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            color: #e2e8f0;
+            margin: 1rem 0;
+            font-size: 0.95rem;
+        }
+
+        .grid-tools {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .tool-item {
+            background-color: #0f172a;
+            border: 1px solid var(--border);
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .tool-item strong {
+            color: var(--primary-hover);
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            background-color: #090d16;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .card { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Explorando la Inteligencia Artificial Modern</h1>
+        <p>Una guía integral sobre fundamentos, ingeniería de prompts, creación multimedia, desarrollo de software y robótica autónoma.</p>
+    </header>
+
+    <main>
+
+        <!-- 1. DEFINICIÓN DE IA -->
+        <section class="card">
+            <h2>1. ¿Qué es la Inteligencia Artificial?</h2>
+            <p>La <strong>Inteligencia Artificial (IA)</strong> es una rama fundamental de la ciencia de la computación que busca diseñar sistemas informáticos capaces de realizar procesos cognitivos que históricamente requerían de la inteligencia humana. Estos procesos incluyen el aprendizaje (adquisición de información y reglas de uso), el razonamiento (uso de reglas para llegar a conclusiones), la auto-corrección y la resolución de problemas complejos.</p>
+
+            <h3 class="sub-title">Tipos de Inteligencia Artificial</h3>
+            <ul>
+                <li><strong>IA Estrecha o Débil (ANI):</strong> Especializada en una sola tarea específica (como los motores de recomendación, el reconocimiento facial o los modelos de lenguaje actual).</li>
+                <li><strong>IA General (AGI):</strong> Concepto teórico de una máquina con capacidad de comprender, aprender y aplicar conocimiento de manera autónoma en cualquier ámbito, equivalente al cerebro humano.</li>
+                <li><strong>IA Generativa:</strong> Subcampo que permite a las computadoras crear contenido totalmente nuevo (texto, imágenes, audio, código o video) a partir de patrones aprendidos de grandes volúmenes de datos.</li>
+            </ul>
+        </section>
+
+        <!-- 2. PROMPT ENGINEERING -->
+        <section class="card">
+            <h2>2. Cómo Redactar un Prompt Efectivo</h2>
+            <p>Un <strong>Prompt</strong> es la instrucción, pregunta o conjunto de texto que se le proporciona a un modelo de IA para guiar su respuesta. La <em>Ingeniería de Prompts</em> es la disciplina que optimiza esta comunicación para obtener resultados precisos y útiles.</p>
+
+            <h3 class="sub-title">Estructura del Prompt Perfecto (Fórmula C.R.E.A.)</h3>
+            <ol>
+                <li><strong>Contexto / Rol:</strong> Asigna una identidad a la IA (ej. <em>"Actúa como un programador senior con experiencia en Python"</em>).</li>
+                <li><strong>Requerimiento / Tarea:</strong> Describe exactamente lo que necesitas sin ambigüedades.</li>
+                <li><strong>Especificaciones / Restricciones:</strong> Indica límites, tono, idioma o detalles a evitar.</li>
+                <li><strong>Acomodo del Formato:</strong> Pide el resultado en un formato claro (párrafos, viñetas, tabla Markdown, JSON, etc.).</li>
+            </ol>
+
+            <h3 class="sub-title">Ejemplo de Prompt Avanzado:</h3>
+            <div class="example-box">
+                "Actúa como un profesor universitario de informática. Explícame el concepto de 'Recursividad' para un estudiante de primer semestre. Usa una analogía del mundo real, no te extiendas más de 3 párrafos y finaliza con un resumen corto en 3 viñetas clave."
+            </div>
+        </section>
+
+        <!-- 3. VIDEOS CON IA -->
+        <section class="card">
+            <h2>3. Generación y Edición de Video con IA</h2>
+            <p>La IA ha transformado la producción audiovisual al permitir generar material de video profesional sin necesidad de cámaras, actores ni sets de grabación costosos. Estos algoritmos interpretan instrucciones escritas o referencias visuales para renderizar secuencias complejas en minutos.</p>
+
+            <h3 class="sub-title">Principales Aplicaciones en Video</h3>
+            <ul>
+                <li><strong>Text-to-Video (Texto a Video):</strong> Creación de escenas hiperrealistas o animadas directamente desde un prompt de texto.</li>
+                <li><strong>Avatares e Hiperrealismo:</strong> Generación de personas virtuales que presentan discursos sincronizando sus labios (*lip-sync*) y gestos faciales con cualquier archivo de voz.</li>
+                <li><strong>Postproducción Automatizada:</strong> Eliminación de fondos sin croma, rastreo de objetos (*object tracking*), edición de audio y subtitulado automático en múltiples idiomas.</li>
+            </ul>
+
+            <h3 class="sub-title">Herramientas Destacadas</h3>
+            <div class="grid-tools">
+                <div class="tool-item">
+                    <strong>Runway / Luma / Sora</strong>
+                    Generación de clips de alta calidad fotorrealistas.
+                </div>
+                <div class="tool-item">
+                    <strong>HeyGen / Synthesia</strong>
+                    Creación de avatares virtuales para videos corporativos y educativos.
+                </div>
+                <div class="tool-item">
+                    <strong>CapCut / Premiere IA</strong>
+                    Edición automatizada, subtítulos y limpieza de audio.
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PRESENTACIONES CON IA -->
+        <section class="card">
+            <h2>4. Creación de Presentaciones Automatizadas</h2>
+            <p>El desarrollo de diapositivas tradicionales requiere horas de diseño, organización de contenidos y maquetación. Las plataformas modernas con IA analizan temas completos o documentos densos para estructurar diapositivas completas en cuestión de segundos.</p>
+
+            <h3 class="sub-title">Beneficios Clave</h3>
+            <ul>
+                <li><strong>Estructuración de Contenido:</strong> La IA sintetiza textos largos y extrae las ideas principales para distribuir el flujo narrativo de la exposición.</li>
+                <li><strong>Diseño Adaptativo:</strong> Aplica principios de tipografía, contraste y equilibrio visual sin requerir habilidades de diseño gráfico.</li>
+                <li><strong>Generación de Gráficos e Iconos:</strong> Ilustra automáticamente las ideas mediante imágenes conceptuales generadas al instante.</li>
+            </ul>
+
+            <h3 class="sub-title">Herramientas Recomendadas</h3>
+            <div class="grid-tools">
+                <div class="tool-item">
+                    <strong>Gamma App</strong>
+                    Crea presentaciones interactivas y documentos desde un simple tema.
+                </div>
+                <div class="tool-item">
+                    <strong>Tome / Beautiful.ai</strong>
+                    Diseño de diapositivas con estéticas modernas y diseño inteligente.
+                </div>
+                <div class="tool-item">
+                    <strong>Copilot para PowerPoint</strong>
+                    Integración directa para convertir archivos de Word en diapositivas.
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. PROGRAMAS Y CÓDIGO CON IA -->
+        <section class="card">
+            <h2>5. Programación y Desarrollo de Software asistido por IA</h2>
+            <p>La IA está revolucionando la ingeniería de software al servir como un "copiloto de código". Los desarrolladores utilizan modelos de lenguaje entrenados en repositorios masivos para acelerar el ciclo de desarrollo de software (SDLC).</p>
+
+            <h3 class="sub-title">Capacidades en el Desarrollo</h3>
+            <ul>
+                <li><strong>Autocompletado Inteligente:</strong> Anticipa la siguiente línea o función entera que el programador desea escribir dentro del editor de código.</li>
+                <li><strong>Refactorización y Depuración (*Debugging*):</strong> Identifica errores sintácticos o lógicos y propone correcciones optimizadas en tiempo real.</li>
+                <li><strong>Documentación y Traducción:</strong> Genera explicaciones automáticas de bloques de código complejos y convierte programas entre diferentes lenguajes (ej. de Python a C++).</li>
+            </ul>
+
+            <h3 class="sub-title">Herramientas Populares para Desarrolladores</h3>
+            <div class="grid-tools">
+                <div class="tool-item">
+                    <strong>GitHub Copilot</strong>
+                    Asistente integrado directamente en editores como VS Code.
+                </div>
+                <div class="tool-item">
+                    <strong>ChatGPT / Claude / Gemini</strong>
+                    Explicación de algoritmos, diseño de bases de datos y resolver dudas.
+                </div>
+                <div class="tool-item">
+                    <strong>Cursor / Phind</strong>
+                    Editores de código construidos desde cero en torno a la IA.
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. ROBÓTICA E IA -->
+        <section class="card">
+            <h2>6. Robótica Integrada con Inteligencia Artificial</h2>
+            <p>La unión de la Inteligencia Artificial con la Robótica permite trasladar los modelos de procesamiento digital al mundo físico. Un robot dotado de IA no solo sigue un conjunto fijo de instrucciones programadas, sino que puede percibir, razonar y adaptarse a entornos dinámicos e impredecibles.</p>
+
+            <h3 class="sub-title">Componentes y Tecnologías Clave</h3>
+            <ul>
+                <li><strong>Visión por Computadora (Computer Vision):</strong> Uso de cámaras y sensores (LiDAR) para procesar imágenes, reconocer objetos, detectar profundidad y entender el entorno físico.</li>
+                <li><strong>Navegación Autónoma y SLAM:</strong> Algoritmos que permiten a vehículos o drones mapear áreas desconocidas y trazar rutas seguras sin intervención humana.</li>
+                <li><strong>Aprendizaje por Refuerzo (Reinforcement Learning):</strong> Táctica que permite a los robots aprender tareas complejas (como caminar o sujetar objetos delicados) mediante prueba y error en simulaciones virtuales.</li>
+            </ul>
+
+            <h3 class="sub-title">Campos de Aplicación</h3>
+            <div class="grid-tools">
+                <div class="tool-item">
+                    <strong>Robótica Industrial</strong>
+                    Brazos robóticos en ensambladoras que detectan fallas de calidad al instante.
+                </div>
+                <div class="tool-item">
+                    <strong>Logística Autónoma</strong>
+                    Robots en almacenes que mueven mercancía guiándose por visión artificial.
+                </div>
+                <div class="tool-item">
+                    <strong>Robots Humanoides</strong>
+                    Unidades diseñadas para colaborar de forma segura junto a personas en talleres u hogares.
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Portal Informativo de Inteligencia Artificial — Proyecto desarrollado para fines académicos.</p>
+    </footer>
+
+</body>
+</html>
